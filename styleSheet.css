@@ -55,10 +55,12 @@ html, body
 
 }
 
-.welcome-section
+.section-dimension
 {
-    padding-top: 10rem;
+    height: 100vh;
+    width: 100vw;
 }
+
 
 #company-logo
 {
@@ -75,4 +77,28 @@ html, body
 .font-dm-sans
 {
     font-family: 'DM Sans', sans-serif;
+}
+
+#welcome-section
+{
+    padding-top: 7rem;
+    background-color: darkcyan;
+
+}
+
+#founders-section
+{
+    background-color: rgb(88, 148, 148);
+}
+
+#welcome-message
+{
+    font-size: 3rem;
+    text-align: center;
+}
+
+#welcome-sub-message
+{
+    font-size: 1rem;
+    text-align: center;
 }
