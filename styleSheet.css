@@ -31,6 +31,7 @@ html, body
 {
     display: flex;
     justify-content: space-around;
+    padding-left: 5rem;
     width: 15%;
     min-width: 19rem;
     max-width: 30rem;
@@ -38,12 +39,19 @@ html, body
 
 .nav-link
 {
-    color: black;
+    color: white;
     cursor: pointer;
     width: fit-content;
     text-decoration: none;
     padding: 1rem;
     border-radius: 0.3rem;
+
+}
+
+.nav-link:hover
+{
+    background-color: antiquewhite;
+    color: black;
 
 }
 
@@ -55,11 +63,16 @@ html, body
 #company-logo
 {
     height: 1.8rem;
-    padding-right: 1rem;
+    padding-right: 10rem;
 }
 
 #company-logo:hover
 {
     cursor: pointer;
     height: 1.9rem;
+}
+
+.font-dm-sans
+{
+    font-family: 'DM Sans', sans-serif;
 }
