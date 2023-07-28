@@ -51,7 +51,6 @@ html, body
 {
     background-color: rgba(241, 238, 233, 0.8);
     color: black;
-    backface-;
 
 }
 
@@ -83,7 +82,7 @@ html, body
 {
     padding-top: 7rem;
     background-color: rgb(117, 117, 117);
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     background-image: url(./images/cooker.jpg);
@@ -112,4 +111,9 @@ html, body
     color: antiquewhite;
     padding-bottom: 1rem;
 
+}
+
+#company-logo-main
+{
+    height: 10rem;
 }
