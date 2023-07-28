@@ -22,7 +22,6 @@ html, body
     left: 0;
     top: 0;
     text-align: centre;
-    background-color: rgb(131, 146, 196);
     justify-content: space-between;
     align-items: center;
 }
@@ -50,8 +49,9 @@ html, body
 
 .nav-link:hover
 {
-    background-color: antiquewhite;
+    background-color: rgba(241, 238, 233, 0.8);
     color: black;
+    backface-;
 
 }
 
@@ -82,23 +82,34 @@ html, body
 #welcome-section
 {
     padding-top: 7rem;
-    background-color: darkcyan;
+    background-color: rgb(117, 117, 117);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./images/cooker.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
 
 }
 
 #founders-section
 {
-    background-color: rgb(88, 148, 148);
+    background-color: rgb(148, 148, 148);
 }
 
 #welcome-message
 {
     font-size: 3rem;
     text-align: center;
+    color: antiquewhite;
+    padding-bottom: 2rem;
 }
 
 #welcome-sub-message
 {
     font-size: 1rem;
     text-align: center;
+    color: antiquewhite;
+    padding-bottom: 1rem;
+
 }
