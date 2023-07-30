@@ -7,7 +7,7 @@ html, body
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: rgb(red, green, rgb(16, 16, 104));
     scroll-behavior: smooth;
-    background-color: black;
+    background-color: rgb(46, 27, 3);
 }
 
 /***************************************/
@@ -37,6 +37,7 @@ html, body
     max-width: 30rem;
 }
 
+
 .nav-link
 {
     color: white;
@@ -48,6 +49,7 @@ html, body
 
 }
 
+
 .nav-link:hover
 {
     background-color: rgba(241, 238, 233, 0.8);
@@ -55,23 +57,46 @@ html, body
 
 }
 
-.section-dimension
-{
-    height: 100vh;
-    width: 100vw;
-}
-
 
 #company-logo
 {
     height: 1.8rem;
-    padding-right: 10rem;
+    padding-right: 1rem;
 }
 
-#company-logo:hover
+#company-title
 {
+    font-size: 1.5rem;
+    color: white;
+    padding-right: 5rem;
+}
+
+.main-logo-link-div
+{
+    padding-top: 1rem;
+    width: fit-content;
+}
+
+#main-logo-link
+{
+    display: flex;
+}
+
+#main-logo-link:hover
+{
+    height: 2rem;
     cursor: pointer;
-    height: 1.9rem;
+}
+
+/***************************************/
+/***************************************/
+/* Beinning of welcome section styles */
+
+
+.section-dimension
+{
+    height: 100vh;
+    width: 100vw;
 }
 
 .font-dm-sans
@@ -106,11 +131,13 @@ html, body
     text-align: center;
     color: antiquewhite;
     padding-bottom: 2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Playfair Display', serif;
 }
 
 #welcome-sub-message
 {
-    font-size: 1rem;
+    font-size: 2rem;
     text-align: center;
     color: antiquewhite;
     padding-bottom: 1rem;
@@ -147,3 +174,41 @@ html, body
     height: 20vh;
     min-height: 8rem;
 }
+
+.founders-section-photo-container
+{
+    background-color: rgb(46, 27, 3);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(./images/background.jpg);
+    background-blend-mode: multiply;
+    background-repeat: repeat;
+}
+
+.founders-photo
+{
+    width: 20rem;
+    /*border-radius: 30%;*/
+    border-color: bisque;
+    border-style: double;
+    border-width: 1rem;
+}
+
+.vertical-line
+{
+    width: 0.25rem;
+    height: 25rem;
+    background-color: antiquewhite;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.founder-title
+{
+    font-size: 3rem;
+    color: wheat;
+}
+
+
