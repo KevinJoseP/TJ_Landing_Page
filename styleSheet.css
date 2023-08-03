@@ -198,8 +198,8 @@ body
 
 .founders-section-photo-container
 {
-    height: 100vh;
     display: flex;
+    padding: 7rem 0 7rem 0;
     align-items: center;
     justify-content: center;
 }
@@ -251,7 +251,7 @@ footer
 #social-media-container
 {
     display: flex;
-    width: 10%;
+    width: 8%;
     justify-content:space-between;
     align-items: center;
     
@@ -259,7 +259,7 @@ footer
 
 #founcers-section-description
 {
-    padding-top: 15%;
+    padding-top: 10%;
     color: antiquewhite;
     display: flex;
     justify-content: center;
@@ -277,3 +277,20 @@ footer
     color: wheat;
 }
 
+.founder-details
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.justify-left
+{
+    justify-content: left;
+    align-items: start;
+}
+
+.justify-right
+{
+    align-items: end;
+    justify-content: right;
+}
