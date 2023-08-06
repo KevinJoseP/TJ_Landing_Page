@@ -133,6 +133,15 @@ body
 
 }
 
+#product-section
+{
+    background-image: url(./images/background.jpg);
+    background-blend-mode: multiply;
+    background-repeat: repeat;
+    background-color: rgb(8, 8, 8);
+    padding-bottom: 7rem;
+}
+
 .founders-bg
 {
     width: 100vw;
@@ -237,7 +246,8 @@ footer
     height: 5rem;
     margin-top: -5rem;
     padding-bottom: 1rem;
-    background-color: antiquewhite;
+    background-color: rgb(139, 82, 7);
+    color: whitesmoke;
     display: block;
     bottom: 0;
 }
@@ -261,7 +271,7 @@ footer
     
 }
 
-#founcers-section-description
+.section-description-cont
 {
     padding-top: 10%;
     color: antiquewhite;
@@ -271,7 +281,7 @@ footer
     flex-direction: column;
 }
 
-#founders-section-descr-main
+.section-descr-main
 {
     font-size: 3rem;
 }
@@ -297,4 +307,29 @@ footer
 {
     align-items: end;
     justify-content: right;
+}
+
+#product-lineup
+{
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    width: 50%;
+    margin: auto;
+    padding-top: 10rem;
+}
+
+.product-section-photo-container
+{
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-logo
+{
+    width: 10rem;
 }
