@@ -63,8 +63,11 @@ body
 
 .nav-link:hover
 {
-    background-color: rgba(241, 238, 233, 0.8);
-    color: black;
+    text-decoration: underline;
+    color: wheat;
+    text-decoration-style:solid;
+    text-decoration-thickness: 0.2rem;
+    text-underline-offset: 1rem;
 
 }
 
