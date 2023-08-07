@@ -29,13 +29,12 @@ body
 {
     display: flex;
     position: fixed;
-    width: 100%;
+    width: 60%;
+    padding:0 20%;
     height: 3rem;
-    left: 0;
-    top: 0;
-    text-align: centre;
     justify-content: space-between;
     align-items: center;
+    background-color: rgba(102, 78, 34, 0.3);
 }
 
 #nav-bar
@@ -43,7 +42,6 @@ body
     display: flex;
     justify-content: space-around;
     padding-left: 5rem;
-    width: 15%;
     min-width: 19rem;
     max-width: 30rem;
 }
@@ -87,7 +85,6 @@ body
 
 .main-logo-link-div
 {
-    padding-top: 1rem;
     width: fit-content;
 }
 
