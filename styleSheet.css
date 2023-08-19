@@ -271,7 +271,7 @@ footer
 
 .section-description-cont
 {
-    padding-top: 10%;
+    padding-top: 10rem;
     color: antiquewhite;
     display: flex;
     justify-content: center;
@@ -312,18 +312,16 @@ footer
     padding-top: 10rem;
 }
 
-.product-display-flex
-{
-    display: flex;
-    align-items:center;
-    justify-content:space-between;
-    flex-wrap: wrap;
-}
 
 .product-display-grid
 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(5rem, 15rem));
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .product-section-photo-container
@@ -334,9 +332,17 @@ footer
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    align-self: center;
+    justify-self: center;
 }
 
 .product-logo
 {
     width: 10rem;
+}
+
+#google-map-embedding
+{
+    height: 30rem;
+    width: 100%;
 }
