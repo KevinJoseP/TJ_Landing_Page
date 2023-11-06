@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 html, body
 {
     font-size: 100%;
     margin: 0;
     padding: 0;
     width: 100vw;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Cookie', cursive;
     color: rgb(red, green, rgb(16, 16, 104));
     scroll-behavior: smooth;
     background-color: rgb(46, 27, 3);
@@ -41,6 +45,7 @@ a
     align-items: center;
     z-index: 100;
     box-shadow: 0 0 10rem black;
+    font-family: 'Style Script', cursive;
 }
 
 .nav-bar-bg-colour1
@@ -135,10 +140,15 @@ a
     font-family: 'DM Sans', sans-serif;
 }
 
+.font-playfair-display
+{
+    font-family: 'Playfair Display', serif;
+}
+
 #welcome-section
 {
 
-    background-color: rgb(102, 101, 101);
+    background-color: rgb(114, 99, 86);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,16 +156,31 @@ a
     background-image: url(./images/cooker.jpg);
     background-size: cover;
     background-blend-mode: multiply;
-    background-position: center center;
+    background-position: center;
     min-height: 100vh;
     max-height: fit-content;
 
 }
 
+#story-section
+{
+    background-image: url(./images/wallpaper2.jpeg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.712);
+}
+
 #product-section
 {
     background-color: rgb(8, 8, 8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 .founders-bg
 {
@@ -173,14 +198,28 @@ a
     padding-bottom: 7rem;
 }
 
-#welcome-message
+.welcome-message
 {
-    font-size: 3rem;
+    font-size: 8rem;
     text-align: center;
     color: antiquewhite;
     padding-bottom: 2rem;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Style Script', cursive;
     min-width: fit-content;
+}
+
+.animate-parallax
+{
+    animation: welcome-parallax;
+    animation-duration: 300ms;
+    animation-timing-function: linear;
+    animation-timeline: scroll();
+}
+
+@keyframes welcome-parallax {
+    to{
+        transform: translateY(-1000px);
+    }
 }
 
 #welcome-sub-message
@@ -278,42 +317,26 @@ a
 footer
 {
     width: 100%;
-    height: 5rem;
-    padding-bottom: 1rem;
     background-color: rgb(139, 82, 7);
     color: whitesmoke;
-    display: block;
-    bottom: 0;
-}
-
-.footer-div
-{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-
 }
 
-#social-media-container
-{
-    display: flex;
-    width: 8%;
-    justify-content:space-between;
-    align-items: center;
-    
-}
 
 .section-description-cont
 {
-    padding-top: 10rem;
     color: antiquewhite;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
+
 
 .section-descr-main
 {
@@ -343,17 +366,12 @@ footer
     justify-content: right;
 }
 
-#product-lineup
-{
-    padding-top: 10rem;
-}
-
 
 .product-display
 {
     width: min(60vw, 100rem);
     overflow: hidden;
-    margin: auto;
+    padding-top: 10rem;
     -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
     mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 }
@@ -400,7 +418,28 @@ footer
     width: 100%;
 }
 
+#contact-details-container
+{
+    display: flex;
+    padding-top: 3rem;
+    justify-content: center;
+    align-items: center;
+}
 
+.location-container
+{
+    width: fit-content;
+    box-shadow: 0 0 1rem black;
+}
+
+.contact-us
+{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items:flex-start;
+    padding-left: 5rem;
+}
 
 .down-arrow
 {
@@ -422,6 +461,13 @@ footer
         transform: scaleY(1.5);
     }
     
+}
+
+.contact-h5
+{
+    font-size: 1rem;
+    text-decoration: underline;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .section-anchor
