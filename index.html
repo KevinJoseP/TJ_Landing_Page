@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;800&family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav id = "nav-bar-container">
+    <nav id = "nav-bar-container" class="nav-bar-bg-colour1">
         <div id="nav-bar">
             <a class="nav-link font-dm-sans-100" href="./founders.html">About Us</a>
             <a class="nav-link font-dm-sans-100" href="#products">Products</a>
@@ -30,10 +30,11 @@
         <div id="company-logo-main">
             <img id="company-logo-main-img" alt="TJ Distributors Logo" src="./images/TJ_white.png">
         </div>
-        <div class="" id="welcome-message">Welcome to TJ!!</div>
-        <div id="welcome-sub-message">We are a small group of passionate individuals who wants to make the kitchen a more fun place!!</div>
+        <div class="" id="welcome-message">Welcome to TJ!</div>
+        <!-- <div id="welcome-sub-message">We are a small group of passionate individuals who wants to make the kitchen a more fun place!!</div> -->
         <div id="welcome-sub-message-know-more">
-            <a>Scroll down to know more</a>
+            <!-- <a class="section-anchor" href="./index.html#products">scroll for more</a> -->
+            <img src="./images/down-arrow.svg" alt="an arrow pointing to the rest of the web page" class="down-arrow">
         </div>
     </section>
     <a name="products"></a>
@@ -42,33 +43,35 @@
             <div class="section-descr-main">Our current product lineup</div>
             <div class="section-descr-sub">Keep an eye here!! We will be adding more soon!!</div>
         </div>
-        <div id="product-lineup" class="product-display-grid">
-            <div class="product-section-photo-container">
-                <img src="./images/chakson_logo.png" alt="Chakson Logo" class="product-logo">
-            </div>
-            <div class="product-section-photo-container">
-                <img src="./images/anna_logo.png" alt="Anna Aluminium Logo" class="product-logo">
-            </div>
-            <div class="product-section-photo-container">
-                <img src="./images/kairali_logo.png" alt="Sun Brand Kairali Logo" class="product-logo">
-            </div>
-            <div class="product-section-photo-container">
-                <img src="./images/kohe_logo.png" alt="Kohe Logo" class="product-logo">
-            </div>
-            <div class="product-section-photo-container">
-                <img src="./images/mahipal_logo.png" alt="Mahipal Logo" class="product-logo">
-            </div>
-            <div class="product-section-photo-container">
-                <img src="./images/embassy_logo.png" alt="Embassy Logo" class="product-logo">
-            </div>
-            <div class="product-section-photo-container">
-                <img src="./images/borosil_logo.png" alt="Borosil Logo" class="product-logo">
-            </div>
-            <div class="product-section-photo-container">
-                <img src="./images/mothers_logo.png" alt="Mother's Logo" class="product-logo">
-            </div>
-            <div class="product-section-photo-container">
-                <img src="./images/apco_logo.png" alt="Apco Logo" class="product-logo">
+        <div id="product-lineup" class="product-display">
+            <div class="product-inner-scroller">
+                <div class="product-section-photo-container">
+                    <img src="./images/chakson_logo.png" alt="Chakson Logo" class="product-logo">
+                </div>
+                <div class="product-section-photo-container">
+                    <img src="./images/anna_logo.png" alt="Anna Aluminium Logo" class="product-logo">
+                </div>
+                <div class="product-section-photo-container">
+                    <img src="./images/kairali_logo.png" alt="Sun Brand Kairali Logo" class="product-logo">
+                </div>
+                <div class="product-section-photo-container">
+                    <img src="./images/kohe_logo.png" alt="Kohe Logo" class="product-logo">
+                </div>
+                <div class="product-section-photo-container">
+                    <img src="./images/mahipal_logo.png" alt="Mahipal Logo" class="product-logo">
+                </div>
+                <div class="product-section-photo-container">
+                    <img src="./images/embassy_logo.png" alt="Embassy Logo" class="product-logo">
+                </div>
+                <div class="product-section-photo-container">
+                    <img src="./images/borosil_logo.png" alt="Borosil Logo" class="product-logo">
+                </div>
+                <div class="product-section-photo-container">
+                    <img src="./images/mothers_logo.png" alt="Mother's Logo" class="product-logo">
+                </div>
+                <div class="product-section-photo-container">
+                    <img src="./images/apco_logo.png" alt="Apco Logo" class="product-logo">
+                </div>
             </div>
         </div>
     </section>
@@ -82,4 +85,5 @@
             </address>
         </div>
     </footer>
+    <script src="./src/index.js"></script>
 </body>
