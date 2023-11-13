@@ -367,7 +367,6 @@ footer
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.644);
     background-blend-mode: multiply;
-    background-attachment: fixed;
     color: whitesmoke;
     display: flex;
     flex-direction: column;
