@@ -5,15 +5,16 @@ const productScroller = document.querySelector('.product-inner-scroller');
 const storyTitle = document.querySelector('#story-title');
 const storyDescr = document.querySelector('#story-descr');
 const storyCont = document.querySelector('#story-section');
+const foundersSect = document.querySelector('#founders-section');
+
 
 
 const wellSectOpt = {
     rootMargin: "-100px",
-    threshold: [0, 0.45, 1],
 };
 
 const parallaxOpt = {
-    threshold: 0.5
+
 };
 
 const mainSecOpt = {
@@ -74,6 +75,7 @@ const mainSectObserver = new IntersectionObserver(function(entries, mainSectObse
 
 function addAnimation()
 {
+    if (!productScroller)return;
     const scrollerContent = Array.from(productScroller.children);
     scrollerContent.forEach(item => {
         const duplicatedItem = item.cloneNode(true);
@@ -83,7 +85,8 @@ function addAnimation()
 }
 
 
-navObserver.observe(welSectCont);
-parallaxObserver.observe(storyCont);
-mainSectObserver.observe(welSectCont);
+if (welSectCont)navObserver.observe(welSectCont);
+if (storyCont)parallaxObserver.observe(storyCont);
+if (welSectCont)mainSectObserver.observe(welSectCont);
+// if (foundersSect)navObserver.observe(foundersSect);
 addAnimation();

@@ -35,6 +35,11 @@ a
 /***************************************/
 /* Beinning of Navigation bar styles */
 
+.padding-top-nav-h
+{
+    padding-top: 5rem;
+}
+
 #nav-bar-container
 {
     display: flex;
@@ -164,8 +169,7 @@ a
     background-size: cover;
     background-blend-mode: multiply;
     background-position: center;
-    min-height: 100vh;
-    max-height: fit-content;
+    padding-top: 5rem;
 
 }
 
@@ -204,7 +208,6 @@ a
 
 .founders-bg
 {
-    width: 100vw;
     background-image: url(./images/background.jpg);
     background-blend-mode: multiply;
     background-repeat: repeat;
@@ -214,7 +217,6 @@ a
 #founders-section
 {
 
-    padding-top: -3rem;
     padding-bottom: 7rem;
 }
 
