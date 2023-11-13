@@ -6,6 +6,7 @@ const storyTitle = document.querySelector('#story-title');
 const storyDescr = document.querySelector('#story-descr');
 const storyCont = document.querySelector('#story-section');
 const foundersSect = document.querySelector('#founders-section');
+const foundersSectCont = document.querySelectorAll('.founders-section-photo-container');
 
 
 
@@ -19,6 +20,9 @@ const parallaxOpt = {
 
 const mainSecOpt = {
     threshold: 1.0
+}
+const foundersSectOpt = {
+    threshold: 0.7
 }
 
 let storyLoaded = false;
@@ -47,7 +51,6 @@ const parallaxObserver = new IntersectionObserver(function(entries, parallaxObse
     entries.forEach(entry => {
         if (entry.isIntersecting && !storyLoaded)
         {
-            console.log("Hi");
             storyTitle.classList.remove('opacity-0');
             storyDescr.classList.remove('opacity-0');
             storyTitle.classList.add('animate-slide-in');
@@ -73,6 +76,21 @@ const mainSectObserver = new IntersectionObserver(function(entries, mainSectObse
     })
 }, mainSecOpt);
 
+const foundersSectObserver = new IntersectionObserver(function (entries, foundersSectObserver){
+    entries.forEach(entry => {
+        console.log("Gooo");
+        if (!entry.isIntersecting)
+        {
+            return;
+        }
+        else
+        {
+            entry.target.classList.add('appear');
+            foundersSectObserver.unobserve(entry.target);
+        }
+    })
+}, foundersSectOpt);
+
 function addAnimation()
 {
     if (!productScroller)return;
@@ -85,8 +103,13 @@ function addAnimation()
 }
 
 
+
+
 if (welSectCont)navObserver.observe(welSectCont);
 if (storyCont)parallaxObserver.observe(storyCont);
 if (welSectCont)mainSectObserver.observe(welSectCont);
 // if (foundersSect)navObserver.observe(foundersSect);
+foundersSectCont.forEach(founder => {
+    if (founder)foundersSectObserver.observe(founder);
+});
 addAnimation();
