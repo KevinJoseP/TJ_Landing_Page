@@ -573,3 +573,53 @@ footer
 {
     color: white;
 }
+
+.img-style
+{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.photo-cont
+{
+    width: 60%;
+    margin: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10rem black;
+    position: relative;
+    transition: transform 200ms ease-in;
+
+}
+
+.caption
+{
+    position: absolute;
+    z-index: 2;
+    bottom: 10px;
+    right: 10px;
+    font-size: 3rem;
+    opacity: 0;
+    transition: transform 200ms ease-in, opacity 200ms ease-in;
+    background: linear-gradient(95deg, rgba(139,103,23,0.5) 0%, rgba(56,37,8,0.5) 32%, rgba(56,37,8,0.5) 61%, rgba(139,103,23,0.5) 100%);
+}
+
+/* To be deleted later */
+.temp-style
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.photo-cont:hover .caption
+{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.photo-cont:hover{
+    transform: scale(1.1);
+}
+
