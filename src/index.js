@@ -7,6 +7,8 @@ const storyDescr = document.querySelector('#story-descr');
 const storyCont = document.querySelector('#story-section');
 const foundersSect = document.querySelector('#founders-section');
 const foundersSectCont = document.querySelectorAll('.founders-section-photo-container');
+const galleryPhotos = document.querySelectorAll('.photo-cont');
+const galleryVideos = document.querySelectorAll('.video-cont');
 
 
 
@@ -24,6 +26,10 @@ const mainSecOpt = {
 const foundersSectOpt = {
     threshold: 0.7
 }
+
+const galleryOpts = {
+    threshold: 0.7
+} 
 
 let storyLoaded = false;
 
@@ -78,7 +84,6 @@ const mainSectObserver = new IntersectionObserver(function(entries, mainSectObse
 
 const foundersSectObserver = new IntersectionObserver(function (entries, foundersSectObserver){
     entries.forEach(entry => {
-        console.log("Gooo");
         if (!entry.isIntersecting)
         {
             return;
@@ -90,6 +95,20 @@ const foundersSectObserver = new IntersectionObserver(function (entries, founder
         }
     })
 }, foundersSectOpt);
+
+const galleryObserver = new IntersectionObserver(function (entries, galleryObserver){
+    entries.forEach(entry => {
+        if (!entry.isIntersecting)
+        {
+            return;
+        }
+        else
+        {
+            entry.target.classList.add('appear');
+            galleryObserver.unobserve(entry.target);
+        }
+    });
+}, galleryOpts);
 
 function addAnimation()
 {
@@ -111,5 +130,11 @@ if (welSectCont)mainSectObserver.observe(welSectCont);
 // if (foundersSect)navObserver.observe(foundersSect);
 foundersSectCont.forEach(founder => {
     if (founder)foundersSectObserver.observe(founder);
+});
+galleryPhotos.forEach(photo => {
+    if (photo)galleryObserver.observe(photo);
+});
+galleryVideos.forEach(video => {
+    if (video)galleryObserver.observe(video);
 });
 addAnimation();

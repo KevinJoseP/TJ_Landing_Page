@@ -84,6 +84,11 @@ a
     background-color: rgb(104, 80, 104);
 }
 
+.nav-bar-bg-colour4
+{
+    background-color: rgb(36, 68, 15);
+}
+
 #nav-bar
 {
     display: flex;
@@ -564,9 +569,9 @@ footer
 
 .contact-h5
 {
-    font-size: 1rem;
-    text-decoration: underline;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    color: wheat;
+    margin: 0 0 1rem 0;
 }
 
 .section-anchor
@@ -589,29 +594,62 @@ footer
     box-shadow: 0 0 10rem black;
     position: relative;
     transition: transform 200ms ease-in;
+    opacity: 0;
+    transition: opacity 300ms ease-in;
 
+}
+
+.photo-cont.appear
+{
+    opacity: 1;
+}
+
+.video-cont
+{
+    margin: 2rem;
+    width: fit-content;
+    border-radius: 10px;
+    box-shadow: 0 0 10rem black;
+    position: relative;
+    transition: transform 200ms ease-in;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 300ms ease-in;
+    width: 60%;
+
+}
+
+.video-cont.appear
+{
+    opacity: 1;
+}
+
+#gallery-section
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./images/bg_green.png);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .caption
 {
     position: absolute;
     z-index: 2;
-    bottom: 10px;
+    bottom: 1rem;
     right: 10px;
     font-size: 3rem;
     opacity: 0;
+    color: white;
+    font-size: 2rem;
     transition: transform 200ms ease-in, opacity 200ms ease-in;
-    background: linear-gradient(95deg, rgba(139,103,23,0.5) 0%, rgba(56,37,8,0.5) 32%, rgba(56,37,8,0.5) 61%, rgba(139,103,23,0.5) 100%);
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,0.9822303921568627) 0%, rgba(0,0,0,0) 100%);
 }
 
-/* To be deleted later */
-.temp-style
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
 .photo-cont:hover .caption
 {
@@ -621,5 +659,23 @@ footer
 
 .photo-cont:hover{
     transform: scale(1.1);
+}
+
+.video-cont:hover .caption
+{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.video-cont:hover{
+    transform: scale(1.1);
+}
+
+.video-style
+{
+    border-radius: 10px;
+    box-shadow: 0 0 10rem black;
+    width: 100%;
+    max-height: 100%;
 }
 
