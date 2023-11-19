@@ -27,6 +27,8 @@
 
     --nav-bar-h: 5rem;
 
+    --nav-bar-mobile-h: 3.5rem;
+
     --font-size-200: calc(24px + 0.390625vw);
     --font-size-100: calc(16px + 0.390625vw);
     --font-size-400: calc(48px + 0.390625vw);
@@ -225,6 +227,112 @@ a
     transform: scale(1.1);
 }
 
+.close-symbol
+{
+    display: none;
+    cursor: pointer;
+    margin: 0 1.5rem;
+}
+
+@media (max-width: 35em)
+{
+    #nav-bar
+    {
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+    }
+
+    .nav-link{
+        margin: 1rem;
+    }
+
+
+    #main-logo-link
+    {
+        margin-left: 1.5rem;
+    }
+
+    .mobile-nav
+    {
+        display: flex;
+        justify-content: space-between;
+        min-width: var(--nav-bar-mobile-h);
+
+    }
+    .menu-button
+    {
+        margin: 1.5rem;
+        border: none;
+        background: none;
+    }
+
+
+    .menu-button-icon
+    {
+        filter: invert();
+    }
+
+
+    #nav-bar-container
+    {
+        position: fixed;
+        height: 100%;
+        width: 100vw;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column-reverse;
+        display: none;
+    }
+    #company-logo
+    {
+        height: 1.5rem;
+        margin: 1rem;
+    }
+    
+    #company-title
+    {
+        font-size: 1rem;
+    }
+
+    .main-logo-link-div
+    {
+        display: flex;
+        margin: 1rem 0 3rem 0;
+        min-width: 100vw;
+        justify-content: space-between;
+
+    }
+
+    #main-logo-link.mobile
+    {
+        margin-right: 1.5rem;
+    }
+    
+    #main-logo-link.mobile #company-logo
+    {
+        height: 1.2rem;
+        margin: 0.5rem;
+    }
+
+    #main-logo-link.mobile #company-logo
+    {
+        height: 1.2rem;
+        margin: 0.5rem;
+    }
+
+    .close-symbol
+    {
+        display: flex;
+    }
+
+    .close-img
+    {
+        filter: invert();
+    }
+    
+}
+
 
 /* end of Navigation bar styles */
 /***************************************/
@@ -331,7 +439,7 @@ a
 .section-descr-main
 {
     font-size: var(--font-size-600);
-    color: white;
+    color: var(--color-primary-dark-100)
 }
 
 #story-title
@@ -413,14 +521,72 @@ a
 }
 
 
+/***************************************/
+/* Product section styles */
+/***************************************/
+
+
 #product-section
 {
     background-image: url(./images/bg_bggenerator_com.jpg);
     background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-descr-sub
+{
+    padding-top: 1rem;
+    font-size: var(--font-size-100);
+}
+
+.section-description-cont
+{
+    color: antiquewhite;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+
+.product-display
+{
+    width: min(60vw, 100rem);
+    overflow: hidden;
+    margin-top: 4rem;
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.product-inner-scroller
+{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    flex-wrap: nowrap;
+    width: fit-content;
+    animation-name: horizontal-scroll;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+@keyframes horizontal-scroll {
+    from{
+        transform: translate(0);
+    }
+    to{
+        transform: translate(-50%);
+    }
+}
+
+.product-section-photo-container
+{
+    padding: 0 3rem;
+}
+
+.product-logo
+{
+    width: 20vw;
 }
 
 
@@ -504,9 +670,9 @@ a
     }
 }
 
-
-
-
+/***************************************/
+/* Founders section styles */
+/***************************************/
 
 .founders-section-photo-container
 {
@@ -519,7 +685,7 @@ a
 
 .founders-photo
 {
-    width: 20rem;
+    width: clamp(12rem, 5rem + 10vw, 20rem);
     border-radius: 30px;
     box-shadow: 0 0 rgb(248, 248, 248) 1rem;
 
@@ -528,7 +694,7 @@ a
 
 .founder-title
 {
-    font-size: 3rem;
+    font-size: clamp(1rem, 0.5rem + 5vw, 3rem);
     color: wheat;
 }
 
@@ -547,24 +713,10 @@ footer
     width: 100%;
 }
 
-
-.section-description-cont
-{
-    color: antiquewhite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 2rem;
-}
-
-
-
-
-
 .founder-descr
 {
     color: whitesmoke;
+    font-size: clamp(0.5rem, 0.25rem + 2.5vw, 1.5rem);
 }
 
 .founder-details
@@ -587,50 +739,6 @@ footer
 }
 
 
-.product-display
-{
-    width: min(60vw, 100rem);
-    overflow: hidden;
-    padding-top: 10rem;
-    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-}
-
-.product-inner-scroller
-{
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    width: fit-content;
-    animation-name: horizontal-scroll;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
-.product-inner-scroller:hover
-{
-    animation-play-state: paused;
-}
-
-@keyframes horizontal-scroll {
-    from{
-        transform: translate(0);
-    }
-    to{
-        transform: translate(-50%);
-    }
-}
-
-.product-section-photo-container
-{
-    padding: 0 3rem;
-}
-
-.product-logo
-{
-    width: 20rem;
-}
 
 #google-map-embedding
 {

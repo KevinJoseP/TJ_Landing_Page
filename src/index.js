@@ -11,6 +11,9 @@ const galleryPhotos = document.querySelectorAll('.photo-cont');
 const galleryVideos = document.querySelectorAll('.video-cont');
 const whyTitle = document.querySelector('#why-title');
 const whyReasons = document.querySelectorAll('.why-reason');
+const menuBtn = document.querySelector('#menu-button');
+const menuNav = document.querySelector('#mobile-nav');
+const closeBtn = document.querySelector('.close-symbol');
 
 
 
@@ -126,7 +129,19 @@ const whyObserver = new IntersectionObserver(function (entries, whyObserver){
     });
 }, whyOpts);
 
+function handleMenuSelect(event)
+{
+    event.preventDefault();
+    menuNav.style.display = "None";
+    navCont.style.display = "flex";
+}
 
+function handleCloseSelect(event)
+{
+    event.preventDefault();
+    menuNav.style.display = "flex";
+    navCont.style.display = "None";
+}
 
 
 if (welSectCont)navObserver.observe(welSectCont);
@@ -144,6 +159,10 @@ galleryVideos.forEach(video => {
 if (whyTitle)whyObserver.observe(whyTitle);
 whyReasons.forEach(reason => {
     if (reason)whyObserver.observe(reason);
-})
+});
+
+
+if (menuBtn)menuBtn.addEventListener('click', handleMenuSelect);
+if (closeBtn)closeBtn.addEventListener('click', handleCloseSelect);
 
 addAnimation();
