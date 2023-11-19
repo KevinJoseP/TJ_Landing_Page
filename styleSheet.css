@@ -24,6 +24,7 @@
     --color-primary-dark-100: #B7966B;
     --color-primary-dark-400: #946D43;
     --color-black: #000000;
+    --color-white: white;
 
     --nav-bar-h: 5rem;
 
@@ -284,6 +285,8 @@ a
         flex-direction: column-reverse;
         display: none;
     }
+
+
     #company-logo
     {
         height: 1.5rem;
@@ -331,6 +334,10 @@ a
         filter: invert();
     }
     
+    .nav-bar-bg-colour1
+    {
+        background-color: var(--color-white);
+    }
 }
 
 
@@ -440,6 +447,18 @@ a
 {
     font-size: var(--font-size-600);
     color: var(--color-primary-dark-100)
+}
+
+@media (max-width: 35em) {
+    .section-descr-main
+    {
+        font-size: var(--font-size-400);
+        padding: 0 1rem 0 1rem;
+    }
+    .section-description-cont
+    {
+        padding: 0;
+    }
 }
 
 #story-title
@@ -590,19 +609,6 @@ a
 }
 
 
-
-.founders-bg
-{
-    background-image: url(./images/generated_bg.jpg);
-    background-size: cover;
-}
-
-#founders-section
-{
-
-    padding-bottom: 7rem;
-}
-
 .animate-parallax
 {
     animation: welcome-parallax;
@@ -698,19 +704,53 @@ a
     color: wheat;
 }
 
-footer
+.founders-bg
 {
-    width: 100%;
-    background-image: url(./images/office.jpeg);
+    background-image: url(./images/generated_bg.jpg);
     background-size: cover;
-    background-color: rgba(0, 0, 0, 0.644);
-    background-blend-mode: multiply;
-    color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+}
+
+#founders-section
+{
+
+    padding-bottom: 7rem;
+}
+
+@media (max-width: 35em) {
+    .founders-section-photo-container
+    {
+        flex-direction: column;
+        padding: 3rem 0 3rem 0;
+    }
+
+    .founders-section-photo-container.right
+    {
+        flex-direction: column-reverse;
+    }
+
+    .founder-details.justify-left,
+    .founder-details.justify-right
+    {
+        margin-top: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-descr-sub
+    {
+        padding: 1rem 1.5rem 0 1.5rem;
+        font-size: var(--font-size-100);
+    }
+
+    #founders-section
+    {
+        padding-top: 0;
+    }
+    .section-description-cont
+    {
+        padding-bottom: 1rem;
+    }
+
 }
 
 .founder-descr
@@ -739,11 +779,34 @@ footer
 }
 
 
+/***************************************/
+/* footer section styles */
+/***************************************/
 
-#google-map-embedding
+
+
+footer
 {
-    height: 30rem;
     width: 100%;
+    background-image: url(./images/office.jpeg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.644);
+    background-blend-mode: multiply;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+
+
+.location-container
+{
+
 }
 
 #contact-details-container
@@ -757,6 +820,7 @@ footer
 .location-container
 {
     width: fit-content;
+    height: clamp (3rem, 30vw, 30rem);
     box-shadow: 0 0 1rem black;
 }
 
@@ -777,6 +841,20 @@ footer
     margin: 0 0 1rem 0;
 }
 
+@media (max-width: 35em) {
+    #contact-details-container
+    {
+        flex-direction: column;
+    }
+
+    .contact-us
+    {
+        align-items: center;
+        padding: 0;
+        margin-top: 2rem;
+    }
+}
+
 .section-anchor
 {
     color: white;
@@ -791,7 +869,6 @@ footer
 
 .photo-cont
 {
-    width: 60%;
     margin: 2rem;
     border-radius: 10px;
     box-shadow: 0 0 10rem black;
@@ -799,6 +876,7 @@ footer
     transition: transform 200ms ease-in;
     opacity: 0;
     transition: opacity 300ms ease-in;
+    width: clamp(5rem, 80%, 60rem);
 
 }
 
@@ -810,7 +888,6 @@ footer
 .video-cont
 {
     margin: 2rem;
-    width: fit-content;
     border-radius: 10px;
     box-shadow: 0 0 10rem black;
     position: relative;
@@ -818,7 +895,7 @@ footer
     cursor: pointer;
     opacity: 0;
     transition: opacity 300ms ease-in;
-    width: 60%;
+    width: clamp(10rem, 80%, 30rem);
 
 }
 
@@ -853,6 +930,14 @@ footer
     background: radial-gradient(circle, rgba(0,0,0,0.9822303921568627) 0%, rgba(0,0,0,0) 100%);
 }
 
+@media (max-width: 35em) {
+
+
+    #gallery-section
+    {
+        padding-top: 0;
+    }
+}
 
 .photo-cont:hover .caption
 {
