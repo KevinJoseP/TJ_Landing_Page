@@ -11,6 +11,8 @@
     box-sizing: border-box;
 }
 
+
+
 :root
 {
     --font-style-primary: 'Poiret One', sans-serif;
@@ -127,8 +129,8 @@ a
     width: 100%;
     height: var(--nav-bar-h);
     z-index: 100;
-    padding: 0 20%;
-    justify-content: space-between;
+    padding:0 2rem;
+    justify-content: center;
 }
 
 #nav-bar-container.nav-bar-bg-colour1
@@ -138,14 +140,15 @@ a
 
 #nav-bar
 {
-    font-size: var(--font-size-100);
+    font-size: clamp(1rem, 0.5rem + 1vw, 2rem);
+    margin-right: clamp(5rem, calc(2rem + 10vw), 30rem);
 }
 
 
 .nav-link
 {
     cursor: pointer;
-    margin: 2rem;
+    margin: clamp(1rem, 0.5rem + 1vw, 3rem);
     transition: transform 100ms ease-in;
     color: var(--color-primary-dark);
 
@@ -206,13 +209,13 @@ a
 
 #company-logo
 {
-    height: 1.8rem;
-    margin-right: 1rem;
+    height: clamp(1.3rem, 0.5rem + 1vw, 1.8rem);
+    margin-right: clamp(0.5rem, 0.1rem + 1vw, 1rem);
 }
 
 #company-title
 {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 0.5rem + 1vw, 2rem);
     color: var(--color-primary);
 }
 
