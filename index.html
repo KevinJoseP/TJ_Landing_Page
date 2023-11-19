@@ -2,25 +2,22 @@
 <head>
     <meta charset="UTF-8">
     <title>TJ Distributors</title>
+    <link href="./normalize.css" rel="stylesheet">
     <link href="./styleSheet.css" rel="stylesheet">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="./images/LOGO.png" rel="icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;800&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="./images/tj_logo.png" rel="icon">
 </head>
 <body>
     <header>
-        <nav id = "nav-bar-container" class="nav-bar-bg-colour1">
-            <div id="nav-bar">
+        <nav id = "nav-bar-container" class="nav-bar-bg-colour1 display-flex-center-center">
+            <div id="nav-bar" class="display-flex-center-center">
                 <a class="nav-link" href="./founders.html">About Us</a>
                 <a class="nav-link" href="#products">Products</a>
                 <a class="nav-link" href="./gallery.html">Gallery</a>
             </div>
             <div class="main-logo-link-div">
-                <a id="main-logo-link" href="./index.html#home">
+                <a id="main-logo-link" href="./index.html#home" class="display-flex-center-center">
                     <img id="company-logo" alt="TJ Distributors Logo" src="./images/TJ_white_logo_only.png">
                     <div id="company-title" class="font-playfair-display">TJ Distributors</div>
                 </a>
@@ -28,19 +25,28 @@
         </nav>
     </header>
     <a name="home"></a>
-    <section class="section-dimension padding-top-nav-h" id="welcome-section">
+    <section class="section-dimension padding-top-nav-h display-flex-center-center flex-column" id="welcome-section">
         <div id="company-logo-main" class="animate-parallax">
-            <img id="company-logo-main-img" alt="TJ Distributors Logo" src="./images/TJ_white.png">
+            <img id="company-logo-main-img" alt="TJ Distributors Logo" src="./images/logo_tj_brown.png">
         </div>
         <div class="welcome-message animate-parallax font-mea-Culpa" id="welcome-message">Welcome to TJ!</div>
-        <!-- <div id="welcome-sub-message">We are a small group of passionate individuals who wants to make the kitchen a more fun place!!</div> -->
-        <div id="welcome-sub-message-know-more" class="animate-parallax">
+        <div id="welcome-sub-message">Let us know what you need—we've got you covered!!</div>
+        <div id="welcome-sub-message-know-more display-flex-center-center flex-column" class="animate-parallax">
             <!-- <a class="section-anchor" href="./index.html#products">scroll for more</a> -->
             <img src="./images/down-arrow.svg" alt="an arrow pointing to the rest of the web page" class="down-arrow">
         </div>
     </section>
+    <a name="Why-TJ"></a>
+    <section class="section-dimension padding-top-nav-h padding-bottom-nav-h display-flex-center-center flex-column" id="why-section">
+        <div class="font-mea-Culpa" id="why-title">Why TJ?</div>
+        <div class="why-cont">
+            <div class="why-reason">Greatest Prices</div>
+            <div class="why-reason">Fastest Delivery</div>
+            <div class="why-reason">Best Service</div>
+        </div>
+    </section>
     <a name="Story"></a>
-    <section class="section-dimension padding-top-nav-h padding-bottom-nav-h" id="story-section">
+    <section class="section-dimension padding-top-nav-h padding-bottom-nav-h display-flex-center-center flex-column" id="story-section">
         <div class="section-descr-main font-mea-Culpa" id="story-title">Our Mission</div>
        <div class="story-descr" id="story-descr">We are a dedicated team with over 30 years of experience in the kitchenware industry. Our shared passion for quality cookware and kitchen utensils has driven us to bring the highest quality products to your kitchen, allowing you to fully experience the culinary wonders of God's Own Country.<br>
 

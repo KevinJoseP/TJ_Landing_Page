@@ -9,6 +9,8 @@ const foundersSect = document.querySelector('#founders-section');
 const foundersSectCont = document.querySelectorAll('.founders-section-photo-container');
 const galleryPhotos = document.querySelectorAll('.photo-cont');
 const galleryVideos = document.querySelectorAll('.video-cont');
+const whyTitle = document.querySelector('#why-title');
+const whyReasons = document.querySelectorAll('.why-reason');
 
 
 
@@ -16,8 +18,8 @@ const wellSectOpt = {
     rootMargin: "-100px",
 };
 
-const parallaxOpt = {
-
+const storyOpt = {
+    threshold: 0.6
 };
 
 const mainSecOpt = {
@@ -31,7 +33,9 @@ const galleryOpts = {
     threshold: 0.7
 } 
 
-let storyLoaded = false;
+const whyOpts = {
+    rootMargin: "-100px"
+}
 
 const navObserver = new IntersectionObserver(function(entries, navObserver) {
     entries.forEach(entry => {
@@ -52,35 +56,21 @@ const navObserver = new IntersectionObserver(function(entries, navObserver) {
 
 }, wellSectOpt);
 
-const parallaxObserver = new IntersectionObserver(function(entries, parallaxObserver)
+const storyObserver = new IntersectionObserver(function(entries, storyObserver)
 {
-    entries.forEach(entry => {
-        if (entry.isIntersecting && !storyLoaded)
-        {
-            storyTitle.classList.remove('opacity-0');
-            storyDescr.classList.remove('opacity-0');
-            storyTitle.classList.add('animate-slide-in');
-            storyDescr.classList.add('animate-slide-in');
-            storyLoaded = true;
-        }
-        else
-        {
-            storyTitle.classList.remove('animate-slide-in');
-            storyDescr.classList.remove('animate-slide-in');
-        }
-    })
-}, parallaxOpt);
-
-const mainSectObserver = new IntersectionObserver(function(entries, mainSectObserver){
     entries.forEach(entry => {
         if (entry.isIntersecting)
         {
-            storyLoaded = false;
-            storyTitle.classList.add('opacity-0');
-            storyDescr.classList.add('opacity-0');
+            storyTitle.classList.add('animate-slide-in');
+            storyDescr.classList.add('animate-slide-in');
+            storyObserver.unobserve(entry.target);
+        }
+        else
+        {
+            return;
         }
     })
-}, mainSecOpt);
+}, storyOpt);
 
 const foundersSectObserver = new IntersectionObserver(function (entries, foundersSectObserver){
     entries.forEach(entry => {
@@ -121,12 +111,26 @@ function addAnimation()
     });
 }
 
+const whyObserver = new IntersectionObserver(function (entries, whyObserver){
+    entries.forEach(entry => {
+        console.log(entry.target);
+        if(!entry.isIntersecting)
+        {
+            return;
+        }
+        else
+        {
+            entry.target.classList.add('appear');
+            whyObserver.unobserve(entry.target);
+        }
+    });
+}, whyOpts);
+
 
 
 
 if (welSectCont)navObserver.observe(welSectCont);
-if (storyCont)parallaxObserver.observe(storyCont);
-if (welSectCont)mainSectObserver.observe(welSectCont);
+if (storyCont)storyObserver.observe(storyCont);
 // if (foundersSect)navObserver.observe(foundersSect);
 foundersSectCont.forEach(founder => {
     if (founder)foundersSectObserver.observe(founder);
@@ -137,4 +141,9 @@ galleryPhotos.forEach(photo => {
 galleryVideos.forEach(video => {
     if (video)galleryObserver.observe(video);
 });
+if (whyTitle)whyObserver.observe(whyTitle);
+whyReasons.forEach(reason => {
+    if (reason)whyObserver.observe(reason);
+})
+
 addAnimation();
