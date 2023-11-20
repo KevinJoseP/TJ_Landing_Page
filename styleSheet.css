@@ -147,6 +147,11 @@ a
     margin-right: clamp(5rem, calc(2rem + 10vw), 30rem);
 }
 
+#nav-bar-container.nav-bar-bg-colour1 #nav-bar
+{
+    margin-right: 0;
+}
+
 
 .nav-link
 {
@@ -706,7 +711,7 @@ footer
 
 .photo-cont
 {
-    margin: 2rem;
+    margin-top: clamp(0.2rem, 1vw, 2rem);
     border-radius: 10px;
     box-shadow: 0 0 10rem black;
     position: relative;
@@ -739,6 +744,11 @@ footer
 .video-cont.appear
 {
     opacity: 1;
+}
+
+#gallery-descr
+{
+    margin-bottom: clamp(1rem, 3vw, 3rem);
 }
 
 #gallery-section
@@ -796,6 +806,15 @@ footer
     max-height: 100%;
 }
 
+@media (min-width: 35em)
+{
+    #mobile-nav
+    {
+        display: none;
+    }
+}
+
+
 @media (max-width: 35em)
 {
 
@@ -836,6 +855,10 @@ footer
         filter: invert();
     }
 
+    nav-bar-bg-colour1 .menu-button-icon
+    {
+        filter: none;
+    }
 
     #nav-bar-container
     {
