@@ -22,7 +22,7 @@ const wellSectOpt = {
 };
 
 const storyOpt = {
-    threshold: 0.6
+    threshold: 0.3
 };
 
 const mainSecOpt = {
@@ -116,7 +116,6 @@ function addAnimation()
 
 const whyObserver = new IntersectionObserver(function (entries, whyObserver){
     entries.forEach(entry => {
-        console.log(entry.target);
         if(!entry.isIntersecting)
         {
             return;
