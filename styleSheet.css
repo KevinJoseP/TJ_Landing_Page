@@ -28,6 +28,9 @@
     --color-black: #000000;
     --color-white: white;
 
+    --color-filter-primary-dark: invert(16%) sepia(100%) saturate(402%) hue-rotate(345deg) brightness(95%) contrast(97%);
+    --color-filter-primary-dark-400: invert(46%) sepia(50%) saturate(376%) hue-rotate(351deg) brightness(87%) contrast(96%);
+
     --nav-bar-h: 5rem;
 
     --nav-bar-mobile-h: 3.5rem;
@@ -58,9 +61,6 @@ body
     overflow: auto;
     height: 100%;
     color: var(--color-primary);
-    font-size: 1.3125rem;
-    line-height: 1.6;
-    font-weight: 400;
 }
 
 a
@@ -817,6 +817,15 @@ footer
 
 @media (max-width: 35em)
 {
+    
+    *
+    {
+        text-decoration: none;
+        line-height: none;
+        font-weight: none;
+    }
+
+
 
     #nav-bar
     {
@@ -833,20 +842,25 @@ footer
     #main-logo-link
     {
         margin-left: 1.5rem;
+        height: min-content;
     }
 
     .mobile-nav
     {
         display: flex;
         justify-content: space-between;
-        min-width: var(--nav-bar-mobile-h);
+        position: fixed;
+        align-items: center;
+        width: 100%;
+        z-index: 100;
 
     }
     .menu-button
     {
-        margin: 1.5rem;
+        margin: 1rem 1.5rem;
         border: none;
         background: none;
+        height: fit-content;
     }
 
 
@@ -855,17 +869,21 @@ footer
         filter: invert();
     }
 
-    nav-bar-bg-colour1 .menu-button-icon
+    .nav-bar-bg-colour1 .menu-button-icon,
+    .nav-bar-bg-colour1 .close-img,
+    .nav-bar-bg-colour1 #company-logo
     {
-        filter: none;
+        filter: var(--color-filter-primary-dark-400);
     }
+
+
 
     #nav-bar-container
     {
         position: fixed;
         height: 100%;
         width: 100vw;
-        justify-content: flex-end;
+        justify-content: flex-end !important;
         align-items: center;
         flex-direction: column-reverse;
         display: none;
@@ -965,7 +983,7 @@ footer
     }
     .section-description-cont
     {
-        padding-bottom: 1rem;
+        padding: 1rem 0 0 0;
     }
 
     #contact-details-container
@@ -980,8 +998,14 @@ footer
         margin-top: 2rem;
     }
 
-    #gallery-section
+    #gallery-section,
+    #founders-section
     {
-        padding-top: 0;
+        padding-top: var(--nav-bar-h);
+    }
+
+    .nav-bar-bg-colour1 #company-title
+    {
+        color: var(--color-primary-dark-400);
     }
 }
