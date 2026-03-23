@@ -1,98 +1,99 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TJ Distributors</title>
-    <link href="./normalize.css" rel="stylesheet">
-    <link href="./styleSheet.css" rel="stylesheet">
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="./images/tj_logo.png" rel="icon">
+    <title>Gallery — TJ Distributors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./images/tj_logo.png">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./styleSheet.css">
 </head>
 <body>
-    <header>
-        <nav id = "nav-bar-container" class="nav-bar-bg-colour4 display-flex-center-center">
-            <div id="nav-bar" class="display-flex-center-center">
-                <a class="nav-link" href="./founders.html">The Team</a>
-                <a class="nav-link" href="./index.html#products">Products</a>
-                <a class="nav-link" href="./gallery.html">Gallery</a>
-            </div>
-            <div class="main-logo-link-div">
-                <a id="main-logo-link" href="./index.html#home" class="display-flex-center-center">
-                    <img id="company-logo" alt="TJ Distributors Logo" src="./images/TJ_white_logo_only.png">
-                    <div id="company-title" class="font-playfair-display">TJ Distributors</div>
-                </a>
-                <a href="" class="close-symbol">
-                    <img src="./images/close_icon.svg" alt="close symbol" class="close-img">
-                </a>
-            </div>
-        </nav>
-        <nav class="mobile-nav nav-bar-bg-colour4" id="mobile-nav">
-            <a class="menu-button" id="menu-button">
-                <img src="./images/menu_icon.svg" alt="menu icon" class="menu-button-icon">
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="./index.html" class="nav-logo">
+                <img src="./images/TJ_white_logo_only.png" alt="TJ Distributors Logo">
+                <span>TJ Distributors</span>
             </a>
-            <a id="main-logo-link" href="./index.html#home" class="display-flex-center-center mobile">
-                <img id="company-logo" alt="TJ Distributors Logo" src="./images/TJ_white_logo_only.png">
-                <div id="company-title" class="font-playfair-display">TJ Distributors</div>
-            </a>
-        </nav>
-    </header>
-    <a name="home"></a>
-    <section id="gallery-section" class="section-dimension padding-top-nav-h padding-bottom-nav-h">
-        <div class="section-description-cont" id="gallery-descr">
-            <div class="section-descr-main font-mea-Culpa">The Gallery</div>
-            <div class="section-descr-sub">Just a glimpse of our humble Beginnings!</div>
-        </div>
-        <div class="photo-cont">
-            <img src="./images/gallery_2.jpg" alt="" class="img-style">
-            <div class="caption">The Humble Beginnings</div>
-        </div>
-        <div class="photo-cont">
-            <img src="./images/gallery_1.jpg" alt="" class="img-style">
-            <div class="caption">Some stock</div>
-        </div>
-        <div class="photo-cont">
-            <img src="./images/gallery_3.jpg" alt="" class="img-style">
-            <div class="caption">The Showoff</div>
-        </div>
-        <div class="photo-cont">
-            <img src="./images/gallery_4.jpg" alt="" class="img-style">
-            <div class="caption">Some more stocks</div>
-        </div>
-        <div class="photo-cont">
-            <img src="./images/gallery_5.jpg" alt="" class="img-style">
-            <div class="caption">Again..Some more stocks</div>
-        </div>
-        <div class="photo-cont">
-            <img src="./images/gallery_6.jpg" alt="" class="img-style">
-            <div class="caption">Can't miss these views from the Headquarters</div>
-        </div>
-        <div class="video-cont">
-            <video src="./images/video1.mp4" class="video-style" autoplay muted loop></video>
-            <div class="caption">Just our stocks on display</div>
-        </div>
-    </section>
-    <footer >
-        <address id ="contact-details-container" class="display-flex-center-center">
-            <div class="location-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d620.8911099102495!2d76.2684737384709!3d10.08533623496194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0811dfa41008b1%3A0x7366ca102985ea2b!2sShappu%20Padi!5e0!3m2!1sen!2sin!4v1699280409723!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="nav-menu" id="nav-menu">
+                <a href="./founders.html" class="nav-link">The Team</a>
+                <a href="./index.html#products" class="nav-link">Products</a>
+                <a href="./gallery.html" class="nav-link">Gallery</a>
             </div>
-            <div class="contact-us">
-                <h5 class="contact-h5">Contact Us</h5>
-                <div class="contact">
-                    <img src="" alt="" class="phone-img">
-                    <span class="contact-detai">+91-9496119351</span>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="gallery-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label reveal">Memories</span>
+                    <h2 class="section-title reveal" data-delay="100">The Gallery</h2>
+                    <p class="section-subtitle reveal" data-delay="200">Just a glimpse of our humble Beginnings!</p>
                 </div>
-                <div class="contact">
-                    <img src="" alt="" class="phone-img">
-                    <span class="contact-detai">+91-9249981589</span>
-                </div>
-                <div class="contact">
-                    <img src="" alt="" class="email-img">
-                    <span class="contact-detai">tjdistributorsakr@gmail.com</span>
+                <div class="gallery-grid">
+                    <div class="gallery-item reveal" data-delay="100">
+                        <img src="./images/gallery_2.jpg" alt="The Humble Beginnings">
+                        <div class="gallery-caption">The Humble Beginnings</div>
+                    </div>
+                    <div class="gallery-item reveal" data-delay="200">
+                        <img src="./images/gallery_1.jpg" alt="Some stock">
+                        <div class="gallery-caption">Some stock</div>
+                    </div>
+                    <div class="gallery-item reveal" data-delay="300">
+                        <img src="./images/gallery_3.jpg" alt="The Showoff">
+                        <div class="gallery-caption">The Showoff</div>
+                    </div>
+                    <div class="gallery-item reveal" data-delay="200">
+                        <img src="./images/gallery_4.jpg" alt="Some more stocks">
+                        <div class="gallery-caption">Some more stocks</div>
+                    </div>
+                    <div class="gallery-item reveal" data-delay="300">
+                        <img src="./images/gallery_5.jpg" alt="Again..Some more stocks">
+                        <div class="gallery-caption">Again..Some more stocks</div>
+                    </div>
+                    <div class="gallery-item reveal" data-delay="400">
+                        <img src="./images/gallery_6.jpg" alt="Views from the Headquarters">
+                        <div class="gallery-caption">Can't miss these views from the Headquarters</div>
+                    </div>
+                    <div class="gallery-item reveal" data-delay="300">
+                        <video src="./images/video1.mp4" autoplay muted loop playsinline></video>
+                        <div class="gallery-caption">Just our stocks on display</div>
+                    </div>
                 </div>
             </div>
-        </address>
-        <h5>Copyright &#169; TJ Distributors Pvt Ltd.</h5>
-</footer>
-<script src="./src/index.js"></script>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="./images/TJ_white_logo_only.png" alt="TJ" class="footer-logo">
+                <span class="footer-brand-name">TJ Distributors</span>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d620.8911099102495!2d76.2684737384709!3d10.08533623496194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0811dfa41008b1%3A0x7366ca102985ea2b!2sShappu%20Padi!5e0!3m2!1sen!2sin!4v1699280409723!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="contact-item">+91-9496119351</div>
+                    <div class="contact-item">+91-9249981589</div>
+                    <div class="contact-item">tjdistributorsakr@gmail.com</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; TJ Distributors Pvt Ltd.</p>
+        </div>
+    </footer>
+
+    <script src="./src/index.js"></script>
 </body>
+</html>

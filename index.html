@@ -1,134 +1,138 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>TJ Distributors</title>
-    <link href="./normalize.css" rel="stylesheet">
-    <link href="./styleSheet.css" rel="stylesheet">
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="./images/tj_logo.png" rel="icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TJ Distributors — Premium kitchenware and utensils distribution in Kerala, India.">
+    <link rel="icon" href="./images/tj_logo.png">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./styleSheet.css">
 </head>
 <body>
-    <header>
-        <nav id = "nav-bar-container" class="nav-bar-bg-colour1 display-flex-center-center">
-            <div id="nav-bar" class="display-flex-center-center">
-                <a class="nav-link" href="./founders.html">The Team</a>
-                <a class="nav-link" href="#products">Products</a>
-                <a class="nav-link" href="./gallery.html">Gallery</a>
-            </div>
-            <div class="main-logo-link-div">
-                <a id="main-logo-link" href="./index.html#home" class="display-flex-center-center">
-                    <img id="company-logo" alt="TJ Distributors Logo" src="./images/TJ_white_logo_only.png">
-                    <div id="company-title" class="font-playfair-display">TJ Distributors</div>
-                </a>
-                <a href="" class="close-symbol">
-                    <img src="./images/close_icon.svg" alt="close symbol" class="close-img">
-                </a>
-            </div>
-        </nav>
-        <nav class="mobile-nav nav-bar-bg-colour1" id="mobile-nav">
-            <a class="menu-button" id="menu-button">
-                <img src="./images/menu_icon.svg" alt="menu icon" class="menu-button-icon">
-            </a>
-            <a id="main-logo-link" href="./index.html#home" class="display-flex-center-center mobile">
-                <img id="company-logo" alt="TJ Distributors Logo" src="./images/TJ_white_logo_only.png">
-                <div id="company-title" class="font-playfair-display">TJ Distributors</div>
-            </a>
-        </nav>
-    </header>
-    <a name="home"></a>
-    <section class="section-dimension padding-top-nav-h display-flex-center-center flex-column" id="welcome-section">
-        <div id="company-logo-main" class="animate-parallax">
-            <img id="company-logo-main-img" alt="TJ Distributors Logo" src="./images/logo_tj_brown.png">
-        </div>
-        <div class="welcome-message animate-parallax font-mea-Culpa" id="welcome-message">Welcome to TJ!</div>
-        <div id="welcome-sub-message" class="animate-parallax">Let us know what you need—we've got you covered!!</div>
-        <div id="welcome-sub-message-know-more display-flex-center-center flex-column" class="animate-parallax">
-            <!-- <a class="section-anchor" href="./index.html#products">scroll for more</a> -->
-            <img src="./images/down-arrow.svg" alt="an arrow pointing to the rest of the web page" class="down-arrow">
-        </div>
-    </section>
-    <a name="Why-TJ"></a>
-    <section class="section-dimension padding-top-nav-h padding-bottom-nav-h display-flex-center-center flex-column" id="why-section">
-        <div class="font-mea-Culpa" id="why-title">Why TJ?</div>
-        <div class="why-cont">
-            <div class="why-reason">Greatest Prices</div>
-            <div class="why-reason">Fastest Delivery</div>
-            <div class="why-reason">Best Service</div>
-        </div>
-    </section>
-    <a name="Story"></a>
-    <section class="section-dimension padding-top-nav-h padding-bottom-nav-h display-flex-center-center flex-column" id="story-section">
-        <div class="section-descr-main font-mea-Culpa" id="story-title">Our Mission</div>
-       <div class="story-descr" id="story-descr">We are a dedicated team with over 30 years of experience in the kitchenware industry. Our shared passion for quality cookware and kitchen utensils has driven us to bring the highest quality products to your kitchen, allowing you to fully experience the culinary wonders of God's Own Country.<br>
 
-        Kerala's rich culinary traditions have always inspired us, and we believe that your kitchen should be equipped with the best tools to create delectable dishes. Just as the cuisine of Kerala is renowned for its flavors, our curated selection of kitchen utensils and wares is renowned for its quality.<br>
-        
-        Our extensive experience in the field has shaped our commitment to delivering top-tier kitchen tools. We understand the importance of a well-equipped kitchen, and we're here to help you make the most of your culinary journey.<br>
-        
-        Thank you for choosing to embark on this flavorful journey with us. Together, let's savor the essence of Kerala's cuisine with the highest quality kitchen tools and embrace the joy of cooking. Welcome to our kitchenware haven!"</div>
-    </section>
-    <a name="products"></a>
-    <section class="section-dimension padding-top-nav-h padding-bottom-nav-h display-flex-center-center flex-column" id="product-section">
-        <div class="section-description-cont display-flex-center-center flex-column">
-            <div class="section-descr-main font-mea-Culpa">Our Product Lineup</div>
-            <div class="section-descr-sub">Keep an eye here!! We will be adding more soon!!</div>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="./index.html" class="nav-logo">
+                <img src="./images/TJ_white_logo_only.png" alt="TJ Distributors Logo">
+                <span>TJ Distributors</span>
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <a href="./founders.html" class="nav-link">The Team</a>
+                <a href="#products" class="nav-link">Products</a>
+                <a href="./gallery.html" class="nav-link">Gallery</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-        <div id="product-lineup" class="product-display">
-            <div class="product-inner-scroller">
-                <div class="product-section-photo-container">
-                    <img src="./images/chakson_logo.png" alt="Chakson Logo" class="product-logo">
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero" id="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <img src="./images/logo_tj_brown.png" alt="TJ Distributors" class="hero-logo">
+                <h1 class="hero-title">Welcome to TJ!</h1>
+                <p class="hero-subtitle">Let us know what you need—we've got you covered!!</p>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- Why TJ -->
+        <section class="section why-section" id="why-tj">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label reveal">Discover</span>
+                    <h2 class="section-title reveal" data-delay="100">Why TJ?</h2>
                 </div>
-                <div class="product-section-photo-container">
-                    <img src="./images/anna_logo.png" alt="Anna Aluminium Logo" class="product-logo">
+                <div class="features-grid">
+                    <div class="feature-card reveal" data-delay="100">
+                        <div class="feature-icon">01</div>
+                        <h3 class="feature-name">Greatest Prices</h3>
+                    </div>
+                    <div class="feature-card reveal" data-delay="200">
+                        <div class="feature-icon">02</div>
+                        <h3 class="feature-name">Fastest Delivery</h3>
+                    </div>
+                    <div class="feature-card reveal" data-delay="300">
+                        <div class="feature-icon">03</div>
+                        <h3 class="feature-name">Best Service</h3>
+                    </div>
                 </div>
-                <div class="product-section-photo-container">
-                    <img src="./images/kairali_logo.png" alt="Sun Brand Kairali Logo" class="product-logo">
+            </div>
+        </section>
+
+        <!-- Our Mission -->
+        <section class="section story-section" id="story">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label reveal">About Us</span>
+                    <h2 class="section-title reveal" data-delay="100">Our Mission</h2>
                 </div>
-                <div class="product-section-photo-container">
-                    <img src="./images/kohe_logo.png" alt="Kohe Logo" class="product-logo">
+                <div class="story-content reveal" data-delay="200">
+                    <p>We are a dedicated team with over 30 years of experience in the kitchenware industry. Our shared passion for quality cookware and kitchen utensils has driven us to bring the highest quality products to your kitchen, allowing you to fully experience the culinary wonders of God's Own Country.</p>
+                    <p>Kerala's rich culinary traditions have always inspired us, and we believe that your kitchen should be equipped with the best tools to create delectable dishes. Just as the cuisine of Kerala is renowned for its flavors, our curated selection of kitchen utensils and wares is renowned for its quality.</p>
+                    <p>Our extensive experience in the field has shaped our commitment to delivering top-tier kitchen tools. We understand the importance of a well-equipped kitchen, and we're here to help you make the most of your culinary journey.</p>
+                    <p>Thank you for choosing to embark on this flavorful journey with us. Together, let's savor the essence of Kerala's cuisine with the highest quality kitchen tools and embrace the joy of cooking. Welcome to our kitchenware haven!</p>
                 </div>
-                <div class="product-section-photo-container">
-                    <img src="./images/mahipal_logo.png" alt="Mahipal Logo" class="product-logo">
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section class="section products-section" id="products">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label reveal">Brands</span>
+                    <h2 class="section-title reveal" data-delay="100">Our Product Lineup</h2>
+                    <p class="section-subtitle reveal" data-delay="200">Keep an eye here!! We will be adding more soon!!</p>
                 </div>
-                <div class="product-section-photo-container">
-                    <img src="./images/embassy_logo.png" alt="Embassy Logo" class="product-logo">
+            </div>
+            <div class="product-carousel">
+                <div class="product-track">
+                    <div class="product-item"><img src="./images/chakson_logo.png" alt="Chakson"></div>
+                    <div class="product-item"><img src="./images/anna_logo.png" alt="Anna Aluminium"></div>
+                    <div class="product-item"><img src="./images/kairali_logo.png" alt="Sun Brand Kairali"></div>
+                    <div class="product-item"><img src="./images/kohe_logo.png" alt="Kohe"></div>
+                    <div class="product-item"><img src="./images/mahipal_logo.png" alt="Mahipal"></div>
+                    <div class="product-item"><img src="./images/embassy_logo.png" alt="Embassy"></div>
+                    <div class="product-item"><img src="./images/borosil_logo.png" alt="Borosil"></div>
+                    <div class="product-item"><img src="./images/mothers_logo.png" alt="Mother's"></div>
+                    <div class="product-item"><img src="./images/apco_logo.png" alt="Apco"></div>
                 </div>
-                <div class="product-section-photo-container">
-                    <img src="./images/borosil_logo.png" alt="Borosil Logo" class="product-logo">
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="./images/TJ_white_logo_only.png" alt="TJ" class="footer-logo">
+                <span class="footer-brand-name">TJ Distributors</span>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d620.8911099102495!2d76.2684737384709!3d10.08533623496194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0811dfa41008b1%3A0x7366ca102985ea2b!2sShappu%20Padi!5e0!3m2!1sen!2sin!4v1699280409723!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="product-section-photo-container">
-                    <img src="./images/mothers_logo.png" alt="Mother's Logo" class="product-logo">
-                </div>
-                <div class="product-section-photo-container">
-                    <img src="./images/apco_logo.png" alt="Apco Logo" class="product-logo">
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="contact-item">+91-9496119351</div>
+                    <div class="contact-item">+91-9249981589</div>
+                    <div class="contact-item">tjdistributorsakr@gmail.com</div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <footer >
-            <address id ="contact-details-container" class="display-flex-center-center">
-                <div class="location-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d620.8911099102495!2d76.2684737384709!3d10.08533623496194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0811dfa41008b1%3A0x7366ca102985ea2b!2sShappu%20Padi!5e0!3m2!1sen!2sin!4v1699280409723!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-                <div class="contact-us">
-                    <h5 class="contact-h5">Contact Us</h5>
-                    <div class="contact">
-                        <img src="" alt="" class="phone-img">
-                        <span class="contact-detai">+91-9496119351</span>
-                    </div>
-                    <div class="contact">
-                        <img src="" alt="" class="phone-img">
-                        <span class="contact-detai">+91-9249981589</span>
-                    </div>
-                    <div class="contact">
-                        <img src="" alt="" class="email-img">
-                        <span class="contact-detai">tjdistributorsakr@gmail.com</span>
-                    </div>
-                </div>
-            </address>
-            <h5>Copyright &#169; TJ Distributors Pvt Ltd.</h5>
+        <div class="footer-bottom">
+            <p>Copyright &copy; TJ Distributors Pvt Ltd.</p>
+        </div>
     </footer>
+
     <script src="./src/index.js"></script>
 </body>
+</html>

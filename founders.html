@@ -1,98 +1,99 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TJ Distributors</title>
-    <link href="./normalize.css" rel="stylesheet">
-    <link href="./styleSheet.css" rel="stylesheet">
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="./images/tj_logo.png" rel="icon">
+    <title>The Team — TJ Distributors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="./images/tj_logo.png">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./styleSheet.css">
 </head>
 <body>
-    <header>
-        <nav id = "nav-bar-container" class="nav-bar-bg-colour3 display-flex-center-center">
-            <div id="nav-bar" class="display-flex-center-center">
-                <a class="nav-link" href="./founders.html">The Team</a>
-                <a class="nav-link" href="./index.html#products">Products</a>
-                <a class="nav-link" href="./gallery.html">Gallery</a>
-            </div>
-            <div class="main-logo-link-div">
-                <a id="main-logo-link" href="./index.html#home" class="display-flex-center-center">
-                    <img id="company-logo" alt="TJ Distributors Logo" src="./images/TJ_white_logo_only.png">
-                    <div id="company-title" class="font-playfair-display">TJ Distributors</div>
-                </a>
-                <a href="" class="close-symbol">
-                    <img src="./images/close_icon.svg" alt="close symbol" class="close-img">
-                </a>
-            </div>
-        </nav>
-        <nav class="mobile-nav nav-bar-bg-colour3" id="mobile-nav">
-            <a class="menu-button" id="menu-button">
-                <img src="./images/menu_icon.svg" alt="menu icon" class="menu-button-icon">
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="./index.html" class="nav-logo">
+                <img src="./images/TJ_white_logo_only.png" alt="TJ Distributors Logo">
+                <span>TJ Distributors</span>
             </a>
-            <a id="main-logo-link" href="./index.html#home" class="display-flex-center-center mobile">
-                <img id="company-logo" alt="TJ Distributors Logo" src="./images/TJ_white_logo_only.png">
-                <div id="company-title" class="font-playfair-display">TJ Distributors</div>
-            </a>
-        </nav>
-    </header>
-    <a name="founders"></a>
-    <section id="founders-section" class="founders-bg padding-top-nav-h" >
-        <div class="section-description-cont" >
-            <div class="section-descr-main font-mea-Culpa">Meet the Core team!</div>
-            <div class="section-descr-sub">*Currently, the core team is all there is :-)</div>
-        </div>
-        <div class="founders-section-photo-container display-flex-center-center fade-left">
-            <img class="founders-photo" alt="Tenson MJ's photo" src="./images/tenson.jpg">
-            <div class="founder-details justify-left">
-                <div class="founder-title">Tenson MJ</div>
-                <div class="founder-descr">Co-Founder & CEO</div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="./founders.html" class="nav-link">The Team</a>
+                <a href="./index.html#products" class="nav-link">Products</a>
+                <a href="./gallery.html" class="nav-link">Gallery</a>
             </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-        <div class="founders-section-photo-container display-flex-center-center fade-left right">
-            <div class="founder-details justify-right">
-                <div class="founder-title">Joseph Mathew</div>
-                <div class="founder-descr">Co-Founder & COO</div>
-            </div>
-            <img class="founders-photo" alt="Joseph Mathew's photo" src="./images/jose.jpg">
-        </div>
-        <div class="founders-section-photo-container display-flex-center-center  fade-left">
-            <img class="founders-photo" alt="Soonamma's photo" src="./images/soonam.jpg">
-            <div class="founder-details justify-left">
-                <div class="founder-title">Soonamma Kuruvilla</div>
-                <div class="founder-descr">CMO</div>
-            </div>
-        </div>
-        <div class="founders-section-photo-container display-flex-center-center fade-left right">
-            <div class="founder-details justify-right">
-                <div class="founder-title">Maruti Eeco</div>
-                <div class="founder-descr">Travel Partner</div>
-            </div>
-            <img class="founders-photo" alt="Eco's photo" src="./images/eeco.jpg">
-        </div>
-    </section>
-    <footer >
-        <address id ="contact-details-container" class="display-flex-center-center">
-            <div class="location-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d620.8911099102495!2d76.2684737384709!3d10.08533623496194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0811dfa41008b1%3A0x7366ca102985ea2b!2sShappu%20Padi!5e0!3m2!1sen!2sin!4v1699280409723!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div class="contact-us">
-                <h5 class="contact-h5">Contact Us</h5>
-                <div class="contact">
-                    <img src="" alt="" class="phone-img">
-                    <span class="contact-detai">+91-9496119351</span>
+    </nav>
+
+    <main>
+        <section class="team-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label reveal">Our People</span>
+                    <h2 class="section-title reveal" data-delay="100">Meet the Core Team!</h2>
+                    <p class="section-subtitle reveal" data-delay="200">*Currently, the core team is all there is :-)</p>
                 </div>
-                <div class="contact">
-                    <img src="" alt="" class="phone-img">
-                    <span class="contact-detai">+91-9249981589</span>
-                </div>
-                <div class="contact">
-                    <img src="" alt="" class="email-img">
-                    <span class="contact-detai">tjdistributorsakr@gmail.com</span>
+                <div class="team-grid">
+                    <div class="team-card reveal" data-delay="100">
+                        <img src="./images/tenson.jpg" alt="Tenson MJ">
+                        <div class="team-card-info">
+                            <h3>Tenson MJ</h3>
+                            <p>Co-Founder &amp; CEO</p>
+                        </div>
+                    </div>
+                    <div class="team-card reveal" data-delay="200">
+                        <img src="./images/jose.jpg" alt="Joseph Mathew">
+                        <div class="team-card-info">
+                            <h3>Joseph Mathew</h3>
+                            <p>Co-Founder &amp; COO</p>
+                        </div>
+                    </div>
+                    <div class="team-card reveal" data-delay="300">
+                        <img src="./images/soonam.jpg" alt="Soonamma Kuruvilla">
+                        <div class="team-card-info">
+                            <h3>Soonamma Kuruvilla</h3>
+                            <p>CMO</p>
+                        </div>
+                    </div>
+                    <div class="team-card reveal" data-delay="400">
+                        <img src="./images/eeco.jpg" alt="Maruti Eeco">
+                        <div class="team-card-info">
+                            <h3>Maruti Eeco</h3>
+                            <p>Travel Partner</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </address>
-        <h5>Copyright &#169; TJ Distributors Pvt Ltd.</h5>
-</footer>
-<script src="./src/index.js"></script>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="./images/TJ_white_logo_only.png" alt="TJ" class="footer-logo">
+                <span class="footer-brand-name">TJ Distributors</span>
+            </div>
+            <div class="footer-grid">
+                <div class="footer-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d620.8911099102495!2d76.2684737384709!3d10.08533623496194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0811dfa41008b1%3A0x7366ca102985ea2b!2sShappu%20Padi!5e0!3m2!1sen!2sin!4v1699280409723!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <div class="contact-item">+91-9496119351</div>
+                    <div class="contact-item">+91-9249981589</div>
+                    <div class="contact-item">tjdistributorsakr@gmail.com</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; TJ Distributors Pvt Ltd.</p>
+        </div>
+    </footer>
+
+    <script src="./src/index.js"></script>
 </body>
+</html>
